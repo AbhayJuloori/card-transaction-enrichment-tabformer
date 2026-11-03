@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card Transaction Enrichment</title>
+<meta name="description" content="Categorizing 24 million synthetic card transactions by merchant category code, deriving and auditing attributes, and flagging anomalous spend.">
+<style>
+:root { --bg:#fbfbfa; --fg:#1d1f23; --muted:#5c616b; --card:#ffffff; --line:#e3e4e7; --accent:#2f6fb0; --ok:#2e7d4f; --bad:#b3261e; }
+@media (prefers-color-scheme: dark) { :root { --bg:#16181c; --fg:#e8e9eb; --muted:#a2a7b0; --card:#1f2228; --line:#30343b; --accent:#6aa6e6; --ok:#6cc58f; --bad:#f2b8b5; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif; }
+main { max-width:960px; margin:0 auto; padding:40px 16px 64px; }
+h1 { font-size:1.9rem; line-height:1.2; margin:0 0 8px; }
+h2 { font-size:1.2rem; margin:40px 0 12px; }
+h3 { font-size:1rem; margin:20px 0 8px; color:var(--muted); }
+p.lede { color:var(--muted); margin:0 0 24px; max-width:720px; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
+.kpi { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+.kpi b { display:block; font-size:1.5rem; font-variant-numeric:tabular-nums; }
+.kpi span { color:var(--muted); font-size:.85rem; }
+figure { margin:0; background:#fff; border:1px solid var(--line); border-radius:10px; padding:8px; }
+figure img { width:100%; height:auto; display:block; }
+figcaption { color:#5c616b; font-size:.85rem; padding:6px 4px 2px; }
+.grid2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px; }
+.tablewrap { overflow-x:auto; }
+table { border-collapse:collapse; width:100%; font-variant-numeric:tabular-nums; font-size:.92rem; }
+th, td { text-align:right; padding:6px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+th:first-child, td:first-child { text-align:left; }
+th { color:var(--muted); font-weight:600; }
+td.ok { color:var(--ok); font-weight:600; } td.bad { color:var(--bad); font-weight:600; }
+pre { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; overflow-x:auto; font-size:.85rem; }
+.flow { display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-size:.9rem; }
+.flow span { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:6px 10px; }
+.flow i { color:var(--muted); font-style:normal; }
+a { color:var(--accent); }
+ul { padding-left:20px; }
+footer { color:var(--muted); font-size:.85rem; margin-top:48px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Card transaction categorization and attribute validation</h1>
+<p class="lede">24.4 million synthetic card transactions (IBM TabFormer) loaded into DuckDB, each merchant category code mapped to one of 15 spending categories with a written rule table, and value-added attributes derived in SQL: online vs in person, out-of-state spend, spend bands and recurring payments. Every attribute is audited against a stratified sample recomputed by separate code before release, anomalous spend is flagged two ways and scored on injected spikes, and post-refresh checks watch for drift.</p>
+
+<div class="kpis" id="kpis"></div>
+
+<h2>Categories and attributes</h2>
+<div class="grid2">
+<figure><img src="assets/spend_by_category.png" alt="Spend by category"><figcaption>Category comes from the MCC alone (TabFormer merchant names are integer ids). All 109 codes in the data are in the ISO 18245 list.</figcaption></figure>
+<figure><img src="assets/attributes_by_year.png" alt="Online, away-from-home and recurring shares by year"><figcaption>Online purchases have no city, state or zip by design and are not counted as missing.</figcaption></figure>
+</div>
+
+<h2>Attribute audit</h2>
+<p>Each attribute's sample is recomputed from the raw CSV fields by Python code that does not share the SQL. <b>The first audit failed</b>: 4 of 20 recurring pairs disagreed, because the SQL grouped consecutive months before dropping months that broke the amount rule. After the fix the recurring pairs fell from 28,497 to 12,421 and every sampled row passed.</p>
+<div class="tablewrap"><table id="audit"><thead><tr><th>Attribute</th><th>Sampled</th><th>Passed</th><th>Released</th></tr></thead><tbody></tbody></table></div>
+
+<h2>Anomalous spend</h2>
+<div class="grid2">
+<figure><img src="assets/anomaly_recall.png" alt="Detector recall on injected spikes"><figcaption>500 user-category-months had spend multiplied 3x to 6x; both detectors flag the same share of cells.</figcaption></figure>
+<div class="tablewrap"><table id="anom"><thead><tr><th>Detector</th><th>Flags</th><th>Injected found</th><th>Recall</th></tr></thead><tbody></tbody></table>
+<p style="font-size:.9rem;color:var(--muted)">About 3% of user-category-months are flagged even before injection, so a flag is a prompt to look rather than a finding.</p></div>
+</div>
+
+<h2>Data profile</h2>
+<div class="tablewrap"><table id="profile"><thead><tr><th>Check</th><th>Result</th></tr></thead><tbody></tbody></table></div>
+
+<h2>Limitations</h2>
+<ul>
+<li>TabFormer is generated by rules, so categories, travel and anomalies follow the generator's patterns, not real cardholder behavior.</li>
+<li>The audit recompute is automated; the sample file (<code>docs/audit_sample.csv</code>) is ready for a manual review that has not been done yet.</li>
+<li>The 15-category grouping is this project's own; issuers group MCCs differently.</li>
+<li>No Power BI file is included; <code>docs/user_guide.md</code> explains how to build the report from the DuckDB tables.</li>
+</ul>
+
+<footer>Data: <a href="https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions">IBM TabFormer on Kaggle</a> (synthetic) and <a href="https://github.com/greggles/mcc-codes">greggles/mcc-codes</a>. Code: <a href="https://github.com/AbhayJuloori/card-transaction-enrichment-tabformer">github.com/AbhayJuloori/card-transaction-enrichment-tabformer</a>.</footer>
+</main>
+<script>
+const pct = (v, d = 1) => v == null ? "" : (v * 100).toFixed(d) + "%";
+const num = v => Math.round(v).toLocaleString("en-US");
+const rows = (id, data) => { document.querySelector(`#${id} tbody`).innerHTML = data.map(r => "<tr>" + r.map(c => `<td>${c}</td>`).join("") + "</tr>").join(""); };
+fetch("assets/kpis.json").then(r => r.json()).then(k => {
+  const B = k.build, A = k.audit, N = k.anomaly;
+  const cards = [[num(B.rows), "transactions"], [num(B.cards), "cards (" + num(B.users) + " users)"], ["15", "spending categories from " + B.distinct_mcc + " MCCs"],
+    [A._overall.passed + "/" + A._overall.n, "audit rows passing"], [pct(N.rolling_z.recall, 0), "injected spikes caught (rolling z)"], [pct(B.recurring_txn_share), "transactions recurring"]];
+  document.getElementById("kpis").innerHTML = cards.map(([b, s]) => `<div class="kpi"><b>${b}</b><span>${s}</span></div>`).join("");
+  rows("audit", Object.entries(A).filter(([a]) => a !== "_overall").map(([a, v]) => [a, v.n, v.passed, v.released ? "yes" : "no"]));
+  rows("anom", [["Rolling z > 3", N.rolling_z], ["Isolation forest", N.isolation_forest], ["Either", N.either]].map(([n, v]) => [n, num(v.flags), v.injected_found, pct(v.recall)]));
+  rows("profile", [["Rows", num(B.rows)], ["Years", B.years.join(" to ")], ["MCC codes not in ISO list", B.unmapped_mcc_codes],
+    ["Duplicate rows (same user, card, minute, amount, merchant, MCC)", num(B.duplicate_rows)],
+    ["Missing merchant state outside online rows", num(B.nulls["merchant_state (excluding online)"])],
+    ["Missing zip outside online rows (all foreign merchants)", num(B.nulls["merchant_zip (excluding online)"])],
+    ["Rows with a generator error code", num(B.nulls["errors (any error code)"])], ["Refund share", pct(B.refund_share)], ["Online share", pct(B.online_share)]]);
+});
+</script>
+</body>
+</html>

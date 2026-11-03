@@ -1,0 +1,291 @@
+{
+ "build": {
+  "timings_s": {
+   "01_load.sql": 7.0,
+   "02_profile.sql": 1.5,
+   "03_enrich.sql": 9.6
+  },
+  "rows": 24386900,
+  "users": 2000,
+  "cards": 6139,
+  "years": [
+   1991,
+   2020
+  ],
+  "distinct_mcc": 109,
+  "unmapped_mcc_codes": 0,
+  "unmapped_mcc_txn_share": null,
+  "unmapped_mcc_list": [],
+  "uncategorized_txns": 0,
+  "nulls": {
+   "merchant_city": 0,
+   "use_chip": 0,
+   "merchant_state": 2720821,
+   "merchant_state (excluding online)": 0,
+   "merchant_zip": 2878135,
+   "merchant_zip (excluding online)": 157314,
+   "mcc": 0,
+   "amount": 0,
+   "errors (any error code)": 388431
+  },
+  "duplicate_rows": 220,
+  "online_share": 0.11156895710401896,
+  "refund_share": 0.05103900044696128,
+  "recurring_pairs": 12421,
+  "recurring_txn_share": 0.06056025981162017,
+  "category_mix": {
+   "Groceries": 6664384,
+   "Restaurants & Dining": 3137193,
+   "Fuel": 2638982,
+   "Travel & Transportation": 2576202,
+   "Retail & Department Stores": 2365894,
+   "Utilities & Telecom": 2091316,
+   "Healthcare & Pharmacy": 1618143,
+   "Auto & Car Rental": 1105636,
+   "Home & Hardware": 625867,
+   "Entertainment & Recreation": 581293,
+   "Lodging": 310930,
+   "Personal & Other Services": 262999,
+   "Government, Education & Charity": 175823,
+   "Professional & Business Services": 135202,
+   "Financial & Insurance": 97036
+  },
+  "category_spend": {
+   "Groceries": 216084206.52,
+   "Utilities & Telecom": 214000442.81,
+   "Travel & Transportation": 136427037.61,
+   "Retail & Department Stores": 103057522.8,
+   "Healthcare & Pharmacy": 100157011.51,
+   "Fuel": 96059236.88,
+   "Restaurants & Dining": 83070388.35,
+   "Auto & Car Rental": 70268908.18,
+   "Lodging": 53553816.63,
+   "Entertainment & Recreation": 36460343.67,
+   "Home & Hardware": 32200194.35,
+   "Financial & Insurance": 22434770.51,
+   "Professional & Business Services": 12922106.81,
+   "Personal & Other Services": 11819961.84,
+   "Government, Education & Charity": 2604510.73
+  },
+  "location_mix": {
+   "out_of_country": 157314,
+   "out_of_state": 2009167,
+   "home_state": 19499598,
+   "online": 2720821
+  },
+  "spend_band_mix": {
+   "1000_plus": 16856,
+   "refund": 1244683,
+   "10_to_50": 9553630,
+   "200_to_1000": 586833,
+   "under_10": 5181126,
+   "50_to_200": 7803772
+  },
+  "card_spend_band_mix": {
+   "medium": 1810,
+   "low": 146,
+   "very_high": 1138,
+   "high": 3045
+  }
+ },
+ "audit": {
+  "category": {
+   "n": 60,
+   "passed": 60,
+   "pass_rate": 1.0,
+   "released": true
+  },
+  "channel": {
+   "n": 40,
+   "passed": 40,
+   "pass_rate": 1.0,
+   "released": true
+  },
+  "is_recurring": {
+   "n": 20,
+   "passed": 20,
+   "pass_rate": 1.0,
+   "released": true
+  },
+  "location_vs_home": {
+   "n": 30,
+   "passed": 30,
+   "pass_rate": 1.0,
+   "released": true
+  },
+  "spend_band": {
+   "n": 30,
+   "passed": 30,
+   "pass_rate": 1.0,
+   "released": true
+  },
+  "_overall": {
+   "n": 180,
+   "passed": 180
+  }
+ },
+ "anomaly": {
+  "cells_scored": 2544799,
+  "injected": 500,
+  "z_threshold": 3.0,
+  "window_months": 12,
+  "rolling_z": {
+   "flags": 75375,
+   "injected_found": 358,
+   "recall": 0.716,
+   "share_of_flags_injected": 0.004749585406301824
+  },
+  "isolation_forest": {
+   "flags": 75375,
+   "injected_found": 351,
+   "recall": 0.702,
+   "share_of_flags_injected": 0.0046567164179104475
+  },
+  "either": {
+   "flags": 118843,
+   "injected_found": 382,
+   "recall": 0.764,
+   "share_of_flags_injected": 0.0032143247814343293
+  },
+  "clean_data_z_flags": 75170,
+  "clean_data_z_flags_by_category": {
+   "Auto & Car Rental": 9745,
+   "Home & Hardware": 7121,
+   "Healthcare & Pharmacy": 7083,
+   "Entertainment & Recreation": 6592,
+   "Travel & Transportation": 6505,
+   "Retail & Department Stores": 6310,
+   "Restaurants & Dining": 4862,
+   "Fuel": 4808,
+   "Groceries": 4418,
+   "Personal & Other Services": 4286,
+   "Utilities & Telecom": 4035,
+   "Professional & Business Services": 3626,
+   "Lodging": 2253,
+   "Financial & Insurance": 2020,
+   "Government, Education & Charity": 1506
+  }
+ },
+ "by_year": [
+  {
+   "y": 2000,
+   "online": 0.06511036465630257,
+   "away": 0.1069711176778589,
+   "recurring": 0.08348103010763579
+  },
+  {
+   "y": 2001,
+   "online": 0.06973697470523027,
+   "away": 0.10322658600201662,
+   "recurring": 0.07849285653377158
+  },
+  {
+   "y": 2002,
+   "online": 0.07746940684055062,
+   "away": 0.10221874700597415,
+   "recurring": 0.07774597128291687
+  },
+  {
+   "y": 2003,
+   "online": 0.08246213615546903,
+   "away": 0.10198459154988819,
+   "recurring": 0.07744721359839454
+  },
+  {
+   "y": 2004,
+   "online": 0.08478516858374247,
+   "away": 0.10228483160256668,
+   "recurring": 0.07606494439726434
+  },
+  {
+   "y": 2005,
+   "online": 0.09168516030873779,
+   "away": 0.10398321429203357,
+   "recurring": 0.07345446947912886
+  },
+  {
+   "y": 2006,
+   "online": 0.09624523956500546,
+   "away": 0.10250862629455296,
+   "recurring": 0.0706530530054699
+  },
+  {
+   "y": 2007,
+   "online": 0.10050794611092896,
+   "away": 0.10012699818484502,
+   "recurring": 0.06757270900521661
+  },
+  {
+   "y": 2008,
+   "online": 0.10412436859398755,
+   "away": 0.09915899378505713,
+   "recurring": 0.06515864842332401
+  },
+  {
+   "y": 2009,
+   "online": 0.10510729404751541,
+   "away": 0.09823507297801756,
+   "recurring": 0.06331034930509342
+  },
+  {
+   "y": 2010,
+   "online": 0.10906335395396402,
+   "away": 0.10184880628818437,
+   "recurring": 0.06071116028768295
+  },
+  {
+   "y": 2011,
+   "online": 0.10988882245785078,
+   "away": 0.09840732779432962,
+   "recurring": 0.058702964755681285
+  },
+  {
+   "y": 2012,
+   "online": 0.11324231187792125,
+   "away": 0.09975462313123287,
+   "recurring": 0.058352562562506635
+  },
+  {
+   "y": 2013,
+   "online": 0.11771821357463762,
+   "away": 0.10088742487508359,
+   "recurring": 0.057214869069735184
+  },
+  {
+   "y": 2014,
+   "online": 0.12055780423035227,
+   "away": 0.09805885380651364,
+   "recurring": 0.056383768162392524
+  },
+  {
+   "y": 2015,
+   "online": 0.1253636038230345,
+   "away": 0.09969752990596614,
+   "recurring": 0.05540061515095767
+  },
+  {
+   "y": 2016,
+   "online": 0.12583883191996836,
+   "away": 0.09927135804535185,
+   "recurring": 0.055194379621328976
+  },
+  {
+   "y": 2017,
+   "online": 0.12485493454646737,
+   "away": 0.10130951670545488,
+   "recurring": 0.054109414167672454
+  },
+  {
+   "y": 2018,
+   "online": 0.12491526851241422,
+   "away": 0.09959848900706843,
+   "recurring": 0.05387615698050958
+  },
+  {
+   "y": 2019,
+   "online": 0.12499811478139004,
+   "away": 0.09860525612732018,
+   "recurring": 0.05306455336560827
+  }
+ ]
+}
