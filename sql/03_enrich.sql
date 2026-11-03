@@ -39,22 +39,22 @@ WITH monthly AS (
          count(*) AS n, median(amount) AS amt
   FROM enriched WHERE amount > 0 GROUP BY ALL
 ),
-stats AS (
-  SELECT *, median(amt) OVER (PARTITION BY user_id, card_index, merchant_id) AS pair_median,
-         date_diff('month', lag(m) OVER (PARTITION BY user_id, card_index, merchant_id ORDER BY m), m) AS gap
-  FROM monthly
+qualifying AS (
+  -- qualify months first, so a month that breaks the pattern also breaks the run
+  SELECT * FROM (
+    SELECT *, median(amt) OVER (PARTITION BY user_id, card_index, merchant_id) AS pair_median FROM monthly
+  ) WHERE n = 1 AND abs(amt - pair_median) <= 0.10 * pair_median
 ),
 runs AS (
   SELECT *, sum(CASE WHEN gap = 1 THEN 0 ELSE 1 END) OVER (PARTITION BY user_id, card_index, merchant_id ORDER BY m) AS run_id
-  FROM stats
+  FROM (
+    SELECT *, date_diff('month', lag(m) OVER (PARTITION BY user_id, card_index, merchant_id ORDER BY m), m) AS gap
+    FROM qualifying
+  )
 )
 SELECT user_id, card_index, merchant_id, max(run_len) AS longest_monthly_run
-FROM (
-  SELECT user_id, card_index, merchant_id, run_id, count(*) AS run_len
-  FROM runs
-  WHERE n = 1 AND abs(amt - pair_median) <= 0.10 * pair_median
-  GROUP BY ALL
-) GROUP BY ALL
+FROM (SELECT user_id, card_index, merchant_id, run_id, count(*) AS run_len FROM runs GROUP BY ALL)
+GROUP BY ALL
 HAVING max(run_len) >= 3;
 
 CREATE OR REPLACE TABLE enriched_final AS

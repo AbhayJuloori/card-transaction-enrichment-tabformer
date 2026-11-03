@@ -1,0 +1,181 @@
+attribute,value,txn_id,raw_mcc,raw_city,raw_state,user_id,raw_amount,recomputed,passed
+category,Home & Hardware,14929039,5211,Miami,FL,920,40.50,Home & Hardware,True
+category,Fuel,12808362,5541,Garland,TX,235,40.74,Fuel,True
+category,Retail & Department Stores,10424135,5311,ONLINE,,1428,90.51,Retail & Department Stores,True
+category,"Government, Education & Charity",18558841,9402,Mars,PA,81,19.76,"Government, Education & Charity",True
+category,Professional & Business Services,14803963,7349,ONLINE,,896,49.89,Professional & Business Services,True
+category,Restaurants & Dining,20006485,5814,Monroe,NY,575,9.35,Restaurants & Dining,True
+category,Personal & Other Services,5311770,7230,Angier,NC,1727,34.98,Personal & Other Services,True
+category,Personal & Other Services,746935,7230,Chicago,IL,246,19.06,Personal & Other Services,True
+category,Fuel,6204693,5541,Milwaukee,WI,48,-89.00,Fuel,True
+category,Professional & Business Services,22460371,7349,Kailua,HI,1362,40.62,Professional & Business Services,True
+category,Restaurants & Dining,22506489,5812,Tulsa,OK,1383,3.27,Restaurants & Dining,True
+category,Entertainment & Recreation,1727577,5815,ONLINE,,581,7.78,Entertainment & Recreation,True
+category,Groceries,1842898,5499,Westminster,SC,634,0.91,Groceries,True
+category,"Government, Education & Charity",5060790,9402,Great Falls,MT,1640,16.72,"Government, Education & Charity",True
+category,Healthcare & Pharmacy,17803534,8021,Parma,MO,1844,131.18,Healthcare & Pharmacy,True
+category,Healthcare & Pharmacy,13111284,5912,Fargo,ND,321,79.45,Healthcare & Pharmacy,True
+category,Utilities & Telecom,20441209,4899,ONLINE,,759,183.93,Utilities & Telecom,True
+category,Lodging,9077993,3771,Lincoln Park,MI,1011,167.89,Lodging,True
+category,Restaurants & Dining,3455161,5814,Snohomish,WA,1132,57.39,Restaurants & Dining,True
+category,Financial & Insurance,15695228,6300,ONLINE,,1146,502.14,Financial & Insurance,True
+category,Professional & Business Services,21408950,7349,Gheens,LA,1028,19.27,Professional & Business Services,True
+category,Entertainment & Recreation,863785,5815,ONLINE,,297,9.54,Entertainment & Recreation,True
+category,Auto & Car Rental,6969734,7538,Siler City,NC,310,37.06,Auto & Car Rental,True
+category,Fuel,14258352,5541,Philadelphia,PA,707,92.00,Fuel,True
+category,Personal & Other Services,10982252,7230,Lapel,IN,1611,12.43,Personal & Other Services,True
+category,Retail & Department Stores,5755964,5311,Waukegan,IL,1889,26.73,Retail & Department Stores,True
+category,Entertainment & Recreation,19815853,7832,Denmark,WI,515,12.80,Entertainment & Recreation,True
+category,Financial & Insurance,6073164,6300,ONLINE,,19,188.37,Financial & Insurance,True
+category,"Government, Education & Charity",5030281,9402,Kalida,OH,1638,12.04,"Government, Education & Charity",True
+category,"Government, Education & Charity",2772307,9402,Thompsons Station,TN,931,21.91,"Government, Education & Charity",True
+category,Restaurants & Dining,21889162,5812,Merrill,WI,1180,2.03,Restaurants & Dining,True
+category,Auto & Car Rental,11227871,7538,Old Saybrook,CT,1708,97.34,Auto & Car Rental,True
+category,Utilities & Telecom,11334052,4829,Memphis,TN,1739,120.00,Utilities & Telecom,True
+category,Travel & Transportation,12409393,4214,Columbus,OH,87,14.29,Travel & Transportation,True
+category,Auto & Car Rental,14364602,3393,San Marcos,TX,748,140.00,Auto & Car Rental,True
+category,Retail & Department Stores,590648,5310,Van Buren,AR,212,75.88,Retail & Department Stores,True
+category,Groceries,13442129,5411,Monroe,NC,428,9.61,Groceries,True
+category,Healthcare & Pharmacy,12320146,5912,Houston,TX,58,105.83,Healthcare & Pharmacy,True
+category,Auto & Car Rental,23960189,7538,Houston,TX,1859,47.99,Auto & Car Rental,True
+category,Home & Hardware,3823445,5094,Wheat Ridge,CO,1237,58.58,Home & Hardware,True
+category,Fuel,3835509,5541,Stapleton,GA,1255,94.00,Fuel,True
+category,Groceries,8431020,5499,San Antonio,TX,819,1.61,Groceries,True
+category,Entertainment & Recreation,18905237,7832,Fort Worth,TX,201,32.46,Entertainment & Recreation,True
+category,Financial & Insurance,18952511,6300,ONLINE,,229,518.57,Financial & Insurance,True
+category,Professional & Business Services,4140763,7349,Richmond,VA,1339,38.70,Professional & Business Services,True
+category,Groceries,15098957,5411,Round Rock,TX,973,25.29,Groceries,True
+category,Utilities & Telecom,12659016,4829,Saint Cloud,FL,177,40.00,Utilities & Telecom,True
+category,Personal & Other Services,12706646,7210,Arlington,MA,204,22.52,Personal & Other Services,True
+category,Lodging,21757985,3596,Oakland,CA,1129,177.65,Lodging,True
+category,Utilities & Telecom,22201885,4829,Memphis,TN,1287,100.00,Utilities & Telecom,True
+category,Home & Hardware,13978121,5719,Carmel Valley,CA,622,97.52,Home & Hardware,True
+category,Retail & Department Stores,7413148,5921,Burlington,IA,482,9.00,Retail & Department Stores,True
+category,Healthcare & Pharmacy,17532371,8021,Lynwood,CA,1758,214.34,Healthcare & Pharmacy,True
+category,Home & Hardware,6424961,5211,Tyler,TX,134,71.32,Home & Hardware,True
+category,Travel & Transportation,19445045,4784,ONLINE,,396,57.99,Travel & Transportation,True
+category,Lodging,3339193,3722,Charleston,WV,1102,-294.00,Lodging,True
+category,Financial & Insurance,3366884,6300,ONLINE,,1105,236.54,Financial & Insurance,True
+category,Travel & Transportation,3039058,4214,Monroe,NC,1008,15.73,Travel & Transportation,True
+category,Lodging,17916140,3771,Lincoln Park,MI,1880,83.74,Lodging,True
+category,Travel & Transportation,17981729,4784,ONLINE,,1896,46.46,Travel & Transportation,True
+channel,online,20441209,4899,ONLINE,,759,183.93,online,True
+channel,online,20304134,4121,ONLINE,,691,27.16,online,True
+channel,in_person,12409393,4214,Columbus,OH,87,14.29,in_person,True
+channel,online,11991203,5651,ONLINE,,1958,62.20,online,True
+channel,in_person,6969734,7538,Siler City,NC,310,37.06,in_person,True
+channel,online,19445045,4784,ONLINE,,396,57.99,online,True
+channel,online,19466473,4121,ONLINE,,398,16.49,online,True
+channel,in_person,19098777,5411,Hollywood,FL,283,13.31,in_person,True
+channel,online,19905272,4814,ONLINE,,544,93.21,online,True
+channel,online,19922913,4784,ONLINE,,545,23.10,online,True
+channel,in_person,12808362,5541,Garland,TX,235,40.74,in_person,True
+channel,online,10424135,5311,ONLINE,,1428,90.51,online,True
+channel,online,6629831,5311,ONLINE,,190,15.29,online,True
+channel,in_person,3685803,5411,Saint Louis,MO,1220,5.22,in_person,True
+channel,in_person,6204693,5541,Milwaukee,WI,48,-89.00,in_person,True
+channel,online,1727577,5815,ONLINE,,581,7.78,online,True
+channel,in_person,1842898,5499,Westminster,SC,634,0.91,in_person,True
+channel,in_person,3039058,4214,Monroe,NC,1008,15.73,in_person,True
+channel,online,6073164,6300,ONLINE,,19,188.37,online,True
+channel,online,9899683,4784,ONLINE,,1272,39.39,online,True
+channel,online,9906926,4784,ONLINE,,1272,42.81,online,True
+channel,online,19197779,4784,ONLINE,,311,18.27,online,True
+channel,online,15079973,4784,ONLINE,,973,16.02,online,True
+channel,in_person,15098957,5411,Round Rock,TX,973,25.29,in_person,True
+channel,in_person,22201885,4829,Memphis,TN,1287,100.00,in_person,True
+channel,online,3958880,4784,ONLINE,,1281,12.89,online,True
+channel,online,863785,5815,ONLINE,,297,9.54,online,True
+channel,in_person,15631855,5411,Columbus,OH,1136,3.50,in_person,True
+channel,in_person,5755964,5311,Waukegan,IL,1889,26.73,in_person,True
+channel,in_person,8431020,5499,San Antonio,TX,819,1.61,in_person,True
+channel,online,653786,4814,ONLINE,,217,254.37,online,True
+channel,in_person,11100939,5411,Auburn,AL,1656,43.79,in_person,True
+channel,in_person,18558841,9402,Mars,PA,81,19.76,in_person,True
+channel,in_person,20006485,5814,Monroe,NY,575,9.35,in_person,True
+channel,online,24222195,4814,ONLINE,,1935,150.91,online,True
+channel,in_person,13442129,5411,Monroe,NC,428,9.61,in_person,True
+channel,in_person,7783378,5499,San Antonio,TX,588,1.88,in_person,True
+channel,in_person,17044131,5499,Red Bluff,CA,1589,0.80,in_person,True
+channel,in_person,23459183,5300,Winnsboro,SC,1689,10.32,in_person,True
+channel,online,17981729,4784,ONLINE,,1896,46.46,online,True
+spend_band,10_to_50,11100939,5411,Auburn,AL,1656,43.79,10_to_50,True
+spend_band,1000_plus,18143129,3260,Newton,NJ,1952,2075.81,1000_plus,True
+spend_band,under_10,20006485,5814,Monroe,NY,575,9.35,under_10,True
+spend_band,200_to_1000,3597881,3260,Harrisburg,IL,1186,344.76,200_to_1000,True
+spend_band,under_10,3685803,5411,Saint Louis,MO,1220,5.22,under_10,True
+spend_band,under_10,13442129,5411,Monroe,NC,428,9.61,under_10,True
+spend_band,under_10,1842898,5499,Westminster,SC,634,0.91,under_10,True
+spend_band,10_to_50,19098777,5411,Hollywood,FL,283,13.31,10_to_50,True
+spend_band,50_to_200,10424135,5311,ONLINE,,1428,90.51,50_to_200,True
+spend_band,10_to_50,15098957,5411,Round Rock,TX,973,25.29,10_to_50,True
+spend_band,refund,4024798,5499,San Andreas,CA,1307,-55.00,refund,True
+spend_band,50_to_200,590648,5310,Van Buren,AR,212,75.88,50_to_200,True
+spend_band,50_to_200,19445045,4784,ONLINE,,396,57.99,50_to_200,True
+spend_band,200_to_1000,21114312,5300,Twin Lakes,WI,953,243.24,200_to_1000,True
+spend_band,under_10,8431020,5499,San Antonio,TX,819,1.61,under_10,True
+spend_band,1000_plus,19583872,3144,Kernersville,NC,439,1516.84,1000_plus,True
+spend_band,50_to_200,22201885,4829,Memphis,TN,1287,100.00,50_to_200,True
+spend_band,200_to_1000,13341822,3395,Morganton,NC,407,346.99,200_to_1000,True
+spend_band,refund,6204693,5541,Milwaukee,WI,48,-89.00,refund,True
+spend_band,refund,2344026,5499,Eagle Mountain,UT,808,-60.00,refund,True
+spend_band,1000_plus,4766098,3066,Warwick,RI,1547,1109.80,1000_plus,True
+spend_band,10_to_50,23459183,5300,Winnsboro,SC,1689,10.32,10_to_50,True
+spend_band,refund,2058496,5499,Saint Francisville,LA,699,-65.00,refund,True
+spend_band,10_to_50,12409393,4214,Columbus,OH,87,14.29,10_to_50,True
+spend_band,1000_plus,4617297,3132,Glastonbury,CT,1496,1053.52,1000_plus,True
+spend_band,200_to_1000,17532371,8021,Lynwood,CA,1758,214.34,200_to_1000,True
+spend_band,50_to_200,14258352,5541,Philadelphia,PA,707,92.00,50_to_200,True
+spend_band,refund,3339193,3722,Charleston,WV,1102,-294.00,refund,True
+spend_band,1000_plus,2224632,4411,ONLINE,,770,1946.61,1000_plus,True
+spend_band,200_to_1000,653786,4814,ONLINE,,217,254.37,200_to_1000,True
+location_vs_home,out_of_country,18150570,5499,Calgary,Canada,1952,1.42,out_of_country,True
+location_vs_home,home_state,20006485,5814,Monroe,NY,575,9.35,home_state,True
+location_vs_home,out_of_state,13341822,3395,Morganton,NC,407,346.99,out_of_state,True
+location_vs_home,out_of_country,6968675,5812,Cancun,Mexico,310,22.96,out_of_country,True
+location_vs_home,out_of_state,6969734,7538,Siler City,NC,310,37.06,out_of_state,True
+location_vs_home,home_state,1842898,5499,Westminster,SC,634,0.91,home_state,True
+location_vs_home,out_of_state,16403639,4121,Graham,WA,1377,1.37,out_of_state,True
+location_vs_home,out_of_country,14887387,3684,Guadalajara,Mexico,914,191.00,out_of_country,True
+location_vs_home,out_of_state,6847120,4829,Port Chester,NY,278,100.00,out_of_state,True
+location_vs_home,out_of_state,4608934,5411,Dallas,TX,1496,4.97,out_of_state,True
+location_vs_home,out_of_country,20134088,5813,Oranjestad,Aruba,628,20.84,out_of_country,True
+location_vs_home,out_of_state,22677641,4111,Garland,TX,1431,95.88,out_of_state,True
+location_vs_home,out_of_state,3339193,3722,Charleston,WV,1102,-294.00,out_of_state,True
+location_vs_home,home_state,8431020,5499,San Antonio,TX,819,1.61,home_state,True
+location_vs_home,out_of_country,21656535,4121,Tapei,Taiwan,1101,26.95,out_of_country,True
+location_vs_home,home_state,12409393,4214,Columbus,OH,87,14.29,home_state,True
+location_vs_home,out_of_country,11761566,5812,Kampala,Uganda,1885,34.19,out_of_country,True
+location_vs_home,out_of_country,16778345,5812,Tokyo,Japan,1498,8.58,out_of_country,True
+location_vs_home,home_state,13442129,5411,Monroe,NC,428,9.61,home_state,True
+location_vs_home,home_state,17044131,5499,Red Bluff,CA,1589,0.80,home_state,True
+location_vs_home,out_of_state,17078798,5812,Atlanta,GA,1591,70.64,out_of_state,True
+location_vs_home,out_of_country,14176107,5411,Rome,Italy,680,13.28,out_of_country,True
+location_vs_home,home_state,11100939,5411,Auburn,AL,1656,43.79,home_state,True
+location_vs_home,home_state,15098957,5411,Round Rock,TX,973,25.29,home_state,True
+location_vs_home,out_of_country,13767768,5541,Puerto Vallarta,Mexico,538,52.66,out_of_country,True
+location_vs_home,out_of_state,14364602,3393,San Marcos,TX,748,140.00,out_of_state,True
+location_vs_home,home_state,3685803,5411,Saint Louis,MO,1220,5.22,home_state,True
+location_vs_home,home_state,6204693,5541,Milwaukee,WI,48,-89.00,home_state,True
+location_vs_home,out_of_state,3823445,5094,Wheat Ridge,CO,1237,58.58,out_of_state,True
+location_vs_home,out_of_country,15785409,3504,Paris,France,1194,175.35,out_of_country,True
+is_recurring,True,,,,,1593,25 txns,True,True
+is_recurring,True,,,,,47,79 txns,True,True
+is_recurring,True,,,,,47,606 txns,True,True
+is_recurring,True,,,,,47,89 txns,True,True
+is_recurring,True,,,,,47,39 txns,True,True
+is_recurring,True,,,,,47,69 txns,True,True
+is_recurring,True,,,,,47,81 txns,True,True
+is_recurring,True,,,,,47,120 txns,True,True
+is_recurring,True,,,,,47,79 txns,True,True
+is_recurring,True,,,,,1620,128 txns,True,True
+is_recurring,False,,,,,1593,6 txns,False,True
+is_recurring,False,,,,,1593,1 txns,False,True
+is_recurring,False,,,,,1593,1 txns,False,True
+is_recurring,False,,,,,1593,1 txns,False,True
+is_recurring,False,,,,,1593,1 txns,False,True
+is_recurring,False,,,,,1593,12 txns,False,True
+is_recurring,False,,,,,1593,1 txns,False,True
+is_recurring,False,,,,,1593,2 txns,False,True
+is_recurring,False,,,,,1593,1 txns,False,True
+is_recurring,False,,,,,1593,1 txns,False,True
