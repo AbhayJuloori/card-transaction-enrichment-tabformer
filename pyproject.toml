@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "card-enrichment"
+version = "0.1.0"
+description = "MCC categorization, transaction attributes, audits and anomaly flags on IBM TabFormer card transactions"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["duckdb>=1.1", "pandas>=2.1", "pyarrow>=14", "scikit-learn>=1.4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "matplotlib>=3.8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,53 @@
+priority,mcc_from,mcc_to,category,note
+1,5811,5814,Restaurants & Dining,eating places and fast food
+1,5411,5411,Groceries,grocery stores and supermarkets
+1,5422,5499,Groceries,meat and specialty food stores
+1,5300,5300,Groceries,wholesale clubs
+1,5541,5542,Fuel,service stations and automated fuel dispensers
+1,5983,5983,Fuel,fuel dealers
+1,5172,5172,Fuel,petroleum products
+1,5912,5912,Healthcare & Pharmacy,drug stores and pharmacies
+1,5122,5122,Healthcare & Pharmacy,drugs and druggist sundries
+1,5975,5976,Healthcare & Pharmacy,hearing aids and orthopedic goods
+1,4119,4119,Healthcare & Pharmacy,ambulance services
+1,7011,7012,Lodging,hotels and timeshares
+1,7032,7033,Lodging,camps and trailer parks
+1,7512,7519,Auto & Car Rental,car and truck rental
+1,5511,5599,Auto & Car Rental,auto dealers parts and supplies
+1,7531,7549,Auto & Car Rental,auto repair and services
+1,4111,4111,Travel & Transportation,commuter transport
+1,4112,4112,Travel & Transportation,passenger railways
+1,4121,4121,Travel & Transportation,taxis and limousines
+1,4131,4131,Travel & Transportation,bus lines
+1,4511,4511,Travel & Transportation,airlines
+1,4582,4582,Travel & Transportation,airports
+1,4722,4722,Travel & Transportation,travel agencies
+1,4784,4784,Travel & Transportation,tolls and bridge fees
+1,5732,5735,Retail & Department Stores,electronics software and music stores
+1,5815,5818,Entertainment & Recreation,digital goods and media
+1,8211,8299,"Government, Education & Charity",schools and education
+1,8398,8398,"Government, Education & Charity",charitable organizations
+1,8661,8661,"Government, Education & Charity",religious organizations
+2,0001,1499,Personal & Other Services,agricultural and other services
+2,1500,2999,Home & Hardware,contractors
+2,3000,3299,Travel & Transportation,airline codes
+2,3300,3499,Auto & Car Rental,car rental codes
+2,3500,3999,Lodging,hotel codes
+2,4000,4799,Travel & Transportation,transportation
+2,4800,4999,Utilities & Telecom,telecom and utilities
+2,5000,5199,Home & Hardware,wholesale and durable goods
+2,5200,5299,Home & Hardware,home supply and hardware
+2,5300,5599,Retail & Department Stores,general merchandise
+2,5600,5699,Retail & Department Stores,clothing and accessories
+2,5700,5799,Home & Hardware,home furnishings
+2,5800,5899,Restaurants & Dining,eating and drinking places
+2,5900,5999,Retail & Department Stores,miscellaneous retail
+2,6000,6999,Financial & Insurance,financial institutions and insurance
+2,7000,7299,Personal & Other Services,personal services
+2,7300,7529,Professional & Business Services,business services
+2,7530,7549,Auto & Car Rental,auto services
+2,7550,7799,Professional & Business Services,repair and other services
+2,7800,7999,Entertainment & Recreation,amusement and recreation
+2,8000,8099,Healthcare & Pharmacy,medical services
+2,8100,8999,Professional & Business Services,professional services
+2,9000,9999,"Government, Education & Charity",government services
